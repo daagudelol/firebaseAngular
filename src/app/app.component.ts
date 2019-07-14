@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'firebaseAngular';
+  title = environment.title;
+
+  constructor( public auth: AuthService){
+
+  }
+
 }
